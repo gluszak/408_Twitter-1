@@ -124,5 +124,9 @@ class User {
 		
 	}
 	
+	public function show() {
+		echo $this->email. ' ' . $this->fullName;
+	}
+	
 	
 }
