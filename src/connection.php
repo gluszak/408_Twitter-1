@@ -13,5 +13,5 @@ if($conn->connect_error) {
 	die("Połączenie nieudane. Błąd: ".$conn->connect_error);
 } else {
 	$conn->set_charset("utf8");
-	echo "Połączenie udane<br />";
+	//echo "Połączenie udane<br />";
 }
