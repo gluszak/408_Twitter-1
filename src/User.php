@@ -105,5 +105,24 @@ class User {
 		}
 	}
 	
+	public function loadFromDB(mysqli $conn, $id) {
+		$sql = "SELECT * FROM User WHERE id = $id";
+		$result = $conn->query($sql);
+		if($result->num_rows == 1) {
+			$rowUser = $result->fetch_assoc();
+			$this->id = $rowUser['id'];
+			$this->email = $rowUser['email'];
+			$this->password = $rowUser['password'];
+			$this->fullName = $rowUser['fullName'];
+			$this->active = $rowUser['active'];
+		}
+		
+		return null;
+	}
+	
+	public function loadAllTweets() {
+		
+	}
+	
 	
 }
